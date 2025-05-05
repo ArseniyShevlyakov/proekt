@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Меню с плавной сменой темы</title>
+  <title>Методическое пособие по тестированию</title>
   <style>
     /* Основные стили */
     :root {
@@ -357,25 +357,25 @@
             </button>
             
             <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'home' })); setIsOpen(false); }}>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'home' })); setIsOpen(false);var t,s;s=document.body.scrollTop||window.pageYOffset;t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5); }}>
                 Главная страница
               </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'about' })); setIsOpen(false); }}>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'about' })); setIsOpen(false);var t,s;s=document.body.scrollTop||window.pageYOffset;t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5); }}>
                 Что такое тестирование и для чего оно?
               </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'services' })); setIsOpen(false); }}>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'services' })); setIsOpen(false);var t,s;s=document.body.scrollTop||window.pageYOffset;t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5); }}>
                 Наши услуги
               </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'portfolio' })); setIsOpen(false); }}>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'portfolio' })); setIsOpen(false);var t,s;s=document.body.scrollTop||window.pageYOffset;t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5); }}>
                 Портфолио
               </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'team' })); setIsOpen(false); }}>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'team' })); setIsOpen(false);var t,s;s=document.body.scrollTop||window.pageYOffset;t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5); }}>
                 Наша команда
               </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'pricing' })); setIsOpen(false); }}>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'pricing' })); setIsOpen(false);var t,s;s=document.body.scrollTop||window.pageYOffset;t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5); }}>
                 Цены
               </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'contacts' })); setIsOpen(false); }}>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('sectionChange', { detail: 'contacts' })); setIsOpen(false);var t,s;s=document.body.scrollTop||window.pageYOffset;t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5); }}>
                 Контакты
               </a>
             </div>
@@ -547,6 +547,27 @@
                     <li><b> Проверка соответствия требованиям.</b>  Тестирование помогает убедиться, что разработчики правильно поняли и реализовали требования заказчика или пользователей.</li>
                     <li><b> Проверка работоспособности и стабильности.</b>  Тестирование проводится в реальных условиях использования, чтобы убедиться, что программа выполняет свои функции корректно и надёжно.</li>
                     <li><b> Регрессионное тестирование.</b>  После внесения изменений в код проводится проверка, чтобы убедиться, что эти изменения не привели к новым ошибкам или дефектам.</li>
+                  </ul>
+                  <h3>Принципы тестирования:</h3>
+                  <ul>
+                    <li><b> тестирование показывает наличие дефектов, но не доказывает, что их нет.</b> Вероятность наличия дефектов снижается, 
+                    но отсутствие дефектов не доказывает абсолютную корректность программного обеспечения</li>
+                    <li><b> тестирование необходимо начинать как можно раньше в жизненном цикле разработки системы.</b> Тестирование не может 
+                      быть бесцельным. У каждой активности необходимо определить четкую цель</li>
+                    <li><b>  полное или исчерпывающее тестирование невозможно,</b> так как существует огромное количество комбинаций, предусловий,
+                      постусловий и т. д. Для того чтобы наиболее четко определить, как и что необходимо тестировать, применяются анализ 
+                      рисков, расстановка приоритетов, оценка критичности функционала</li>
+                    <li><b> парадокс пестицида</b> – один из самых известных принципов, который означает, что многократный прогон одних и тех же тестов
+                       при соблюдении одинаковых условий неэффективен. Такие тесты перестают находить дефекты, но это не означает, что их нет.
+                       Тесты должны наиболее полно охватывать систему, а для этого они должны быть разноплановыми, разносторонними. Написание 
+                       тестов – творческая задача. Каждый тест может найти большое количество дефектов, если написан грамотно и продуманно</li>
+                    <li><b> дефекты скапливаются в небольшом количестве модулей,</b> на которых в конечном счете необходимо сосредоточить основные
+                       усилия по тестированию</li>
+                    <li><b> тестирование напрямую зависит от объекта, который подвергается испытаниям.</b> Прежде чем начать тестирование, нужно
+                        изучить систему и понять наиболее критичные и уязвимые места, важность тех или иных функций для пользователей</li>
+                    <li><b> заблуждение об отсутствии ошибок в системе.</b> Данныйпринцип состоит в том, что, если система не подходит пользователю 
+                      и изначально была спроектирована неверно, то она не сможет удовлетврить потребности, даже если множество дефектов были 
+                      обнаружены и устранены</li>
                   </ul>
 
 
